@@ -8,7 +8,11 @@ class FranciscoMoreno(Human, SoftwareEngineer):
         self.name: str = "Francisco"
         self.surnames: str="Moreno Rodríguez"
         self.age: int = 24
-        self.languages: list = ["es_ES", "en_US"]
+        self.languages: dict = {
+            "es_ES": "Native",
+            "en_US": "High",
+            "de_DE": "Low"
+        }
         
         self.skills = [
             "Python",
@@ -18,7 +22,7 @@ class FranciscoMoreno(Human, SoftwareEngineer):
             "C++"
         ]
         
-        self.current_role = "Quality Assurance Specialist"
+        self.current_role = "Software developer"
         self.expected_job_conditions: set = {"software_developer", "learning", "nice_people", "flexibility"}
         
         
@@ -31,7 +35,8 @@ class FranciscoMoreno(Human, SoftwareEngineer):
             "Computer Vision",
             "Web Development",
             "DevOps",
-            "Data Science"
+            "Data Science",
+            "Machine Learning",
         ]
     
     def hire_me(self, new_role: Role):
